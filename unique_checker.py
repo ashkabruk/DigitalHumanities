@@ -1,6 +1,4 @@
-from bs4 import BeautifulSoup
-import requests
-import nltk
+
 
 def unique(items):
     found = set()

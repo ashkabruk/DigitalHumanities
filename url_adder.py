@@ -21,6 +21,8 @@ for i in range(2):
                     date[article] = find_date(url)
                 webtext = soup.find_all(text=True)
                 output = ''
+                for s in soup.select('section'):
+                    s.extract()
                 blacklist = [
                         '[document]',
                         'noscript',
@@ -47,7 +49,9 @@ for i in range(2):
                         'i',
                         'button',
                         'title',
-                        'footer'
+                        'footer',
+                        'img',
+                        'section'
                     ]
                 for t in webtext:
                     if t.parent.name not in blacklist:
@@ -57,4 +61,3 @@ for i in range(2):
                 for i in output:
                     check += i + " "
                 corpus.write(check + "\n")
-    print(date)
