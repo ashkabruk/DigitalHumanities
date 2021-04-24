@@ -59,10 +59,10 @@ def top_words(top, pos_tags: List[str], text):
 if __name__ == '__main__':
     pass
 
-with open("cleaned_corpus.txt", "r", encoding="utf-8") as corpus:
-    corpus_content = corpus.read()
-    word_list = corpus_content.split()
-    print(len(word_list))
+#with open("cleaned_corpus.txt", "r", encoding="utf-8") as corpus:
+#    corpus_content = corpus.read()
+#    word_list = corpus_content.split()
+#    print(len(word_list))
 #    top_words(30, ["VB"], corpus_content)
 #    print(context_window(corpus_content))
 

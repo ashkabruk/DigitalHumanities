@@ -1,5 +1,6 @@
 from numpy import sqrt
 import scipy.stats
+from htmldate import find_date
 
 w1 = [107, 104, 90, 71, 41, 54, 44, 34]
 w2 = [138, 92, 84, 40, 103, 42, 38, 44]
@@ -17,6 +18,8 @@ print(f"{w3}/({new_w1}*{new_w2})")
 #    corpus_content = corpus.readlines()
 #    re.find("(January|February|March|April|May|June|July|August|September|October|November|December)+\s+\d+\s+,+\s+\d+\s+\d")
 
-print(scipy.stats.norm.ppf(0.995))
-dict_keys = dicti.keys()
-first_two = list(dict_keys)[:2]
+with open("urls3.txt", "r", encoding="utf-8") as urles:
+    urles = urles.readlines()
+    print(urles)
+    for url in urles:
+        print(find_date(url.rstrip()))
